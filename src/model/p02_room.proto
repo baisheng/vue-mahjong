@@ -1,0 +1,156 @@
+// ---------
+// 房间相关
+// ---------
+package protopackage;
+import "p00_unit.proto";
+
+// -----
+// 查找房间
+// -----
+// id: 201 开房约定 %% 15分钟，10 和60分钟 100龙玉
+message cs_room_find
+{
+    required uint32 roomId = 1;             // 房号（0为开房，>0进入房间）
+    required uint32 type = 2;               // 开什么类型的房间 1是象山麻将
+    required uint32 longTime = 3;           // 不同的时长，有不同的金钱  
+}
+
+// -----
+// 查找房间返回
+// -----
+// id: 202
+message sc_room_find_response
+{
+    required uint32 result = 1;             // 0失败 1成功
+    required string reason = 2;             // 失败原因
+}
+
+message pb_room_member
+{
+    required uint64 PlayerId = 1;           // 玩家唯一Id
+	required string playerName = 2;         // 玩家名称
+	required uint32 position = 3;           // 位置
+    required string iconUrl = 4;            // 头像链接
+    required uint32 winCount = 5;           // 胜利场次
+    required uint32 totalCount = 6;         // 参加的总场次
+    required uint32 score = 7;              // 总积分
+    required bool isPay = 8;
+}
+
+// -----
+// 退出房间
+// -----
+// id: 205
+message cs_room_quit
+{
+}
+
+// -----
+// 退出房间返回
+// -----
+// id: 206
+message sc_room_quit_response
+{
+    required uint32 result = 1;             // 0失败 1成功
+    required string reason = 2;             // 失败原因
+}
+
+// -----
+// 坐下
+// -----
+// id: 207
+message cs_room_sit
+{
+    required uint32 roomId = 1;             // 房号
+	required uint32 position = 2;           // 位置
+}
+
+// -----
+// 坐下返回
+// -----
+// id: 208
+message sc_room_sit_response
+{
+	required uint32 result = 1;
+	required string reason = 2;             // 失败原因
+}
+
+// -----
+// 房间信息更新
+// -----
+// id: 209
+message sc_room_update
+{
+    required uint32 roomId = 1;             // 房号
+	repeated pb_room_member members = 2;    // 成员列表
+    required uint32 isStart = 3;            // 是否已开局 1是 0否 其实就是是不是正在牌局
+    required bool isMarch = 4;              // 是不是点过开始 只有第一次现实开始按钮
+    required uint64 ownerId = 5;            // 房主Id
+    required uint64 recordId = 6;           // 房间唯一战绩记录id
+    required uint32 type = 7;               // 房间类型
+    required uint32 endTime = 8;            // 等待准备结束时间
+    required uint32 longTime = 9;           // 房间总时长
+}
+
+// -----
+// 房间信息更新
+// -----
+// id: 210
+message sc_room_clean
+{
+    required uint32 roomId = 1;             // 房号
+}
+
+// -----
+// 查询已开房间列表
+// -----
+// id: 211
+message cs_room_owner_list
+{
+}
+
+// -----
+// 查询已开房间列表返回
+// -----
+// id: 212
+message sc_room_owner_list_response
+{
+    repeated pb_room_owner list = 1;
+}
+
+message pb_room_owner
+{
+    required uint32 type = 1;               // 房间类型 1象山麻将 2西周麻将 3斗地主
+    required uint32 number = 2;             // 房间序号
+    required uint32 roomId = 3;             // 房间唯一Id
+	required uint32 create_time = 4;        // 玩家名称
+	required uint32 end_time = 5;           // 关闭时间
+}
+
+//  --------
+//  开局
+// -------
+// id 213
+message cs_room_start_mahjong
+{
+    required uint32 roomId = 1;             // 房号
+}
+
+// -------
+// 开局返回
+//  -------
+// id 214
+message sc_room_start_mahjong
+{   
+    required bool result = 1;
+    required string reason = 2;             // 失败原因
+}
+
+// // --------------
+// // 站起来回观
+// // --------------
+// // id 215
+// message cs_room_stand
+// {
+//     required uint32 roomId = 1;           // 站起来
+// }

@@ -1,0 +1,220 @@
+{
+"frames": {
+	"资源 10.png": {
+		"frame": {"x":55, "y":71, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 11.png": {
+		"frame": {"x":0, "y":283, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 12.png": {
+		"frame": {"x":0, "y":212, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 13.png": {
+		"frame": {"x":54, "y":212, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 14.png": {
+		"frame": {"x":0, "y":354, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 15.png": {
+		"frame": {"x":163, "y":0, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 16.png": {
+		"frame": {"x":0, "y":70, "w":54, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":70},
+		"sourceSize": {"w":54,"h":70}
+	},
+	"资源 17.png": {
+		"frame": {"x":325, "y":71, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 18.png": {
+		"frame": {"x":325, "y":0, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 19.png": {
+		"frame": {"x":324, "y":353, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 2.png": {
+		"frame": {"x":108, "y":282, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 21.png": {
+		"frame": {"x":324, "y":283, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 22.png": {
+		"frame": {"x":324, "y":212, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 23.png": {
+		"frame": {"x":0, "y":141, "w":54, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":70},
+		"sourceSize": {"w":54,"h":70}
+	},
+	"资源 24.png": {
+		"frame": {"x":271, "y":71, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 25.png": {
+		"frame": {"x":271, "y":0, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 26.png": {
+		"frame": {"x":270, "y":351, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 27.png": {
+		"frame": {"x":270, "y":280, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 28.png": {
+		"frame": {"x":270, "y":210, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 29.png": {
+		"frame": {"x":217, "y":140, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 3.png": {
+		"frame": {"x":108, "y":212, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 30.png": {
+		"frame": {"x":217, "y":70, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 31.png": {
+		"frame": {"x":217, "y":0, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 32.png": {
+		"frame": {"x":216, "y":350, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 33.png": {
+		"frame": {"x":216, "y":280, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 34.png": {
+		"frame": {"x":216, "y":210, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 35.png": {
+		"frame": {"x":163, "y":140, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 36.png": {
+		"frame": {"x":163, "y":70, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 37.png": {
+		"frame": {"x":378, "y":142, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 38.png": {
+		"frame": {"x":0, "y":0, "w":54, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":69},
+		"sourceSize": {"w":54,"h":69}
+	},
+	"资源 39.png": {
+		"frame": {"x":162, "y":282, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 4.png": {
+		"frame": {"x":55, "y":142, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 40.png": {
+		"frame": {"x":324, "y":142, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 41.png": {
+		"frame": {"x":109, "y":141, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 42.png": {
+		"frame": {"x":109, "y":70, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 43.png": {
+		"frame": {"x":109, "y":0, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 44.png": {
+		"frame": {"x":108, "y":352, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 5.png": {
+		"frame": {"x":162, "y":353, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 6.png": {
+		"frame": {"x":162, "y":212, "w":53, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":69},
+		"sourceSize": {"w":53,"h":69}
+	},
+	"资源 7.png": {
+		"frame": {"x":54, "y":354, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 8.png": {
+		"frame": {"x":54, "y":283, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	},
+	"资源 9.png": {
+		"frame": {"x":55, "y":0, "w":53, "h":70},
+		"spriteSourceSize": {"x":0,"y":0,"w":53,"h":70},
+		"sourceSize": {"w":53,"h":70}
+	}
+
+},
+"meta": {
+	"image": "sprites.png",
+	"size": {"w": 432, "h": 425},
+	"scale": "1"
+}
+}

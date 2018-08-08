@@ -1,0 +1,35 @@
+// ---------
+// 玩家相关
+// ---------
+package protopackage;
+import "p00_unit.proto";
+
+// -----
+// 玩家信息
+// -----
+// id: 401
+message sc_player_info
+{
+    required uint64 id = 1;                 // 玩家唯一Id
+	required string name = 2;               // 玩家名称
+	required uint32 diamond = 3;            // 剩余钻石
+    required string iconUrl = 4;            // 头像链接
+}
+
+// -----
+// 充值
+// -----
+// id: 402
+message cs_player_recharge
+{
+    required string orderid = 1;            // 订单号
+	required uint32 price = 2;             // 商品名称
+}
+//id:403
+message sc_player_recharge
+{
+	required bool result = 1;             // 结果
+	required string orderid = 2;          // 订单号
+	repeated pb_reward_info reward = 3;   // 充值获得奖励
+	optional string reason = 4;           // 失败的原因
+}

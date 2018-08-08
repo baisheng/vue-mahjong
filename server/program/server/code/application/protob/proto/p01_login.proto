@@ -1,0 +1,80 @@
+// ---------
+// 登录相关
+// ---------
+package protopackage;
+import "p00_unit.proto";
+
+// -----
+// 账号登录
+// -----
+// id: 101
+message cs_login
+{
+	required string account = 1;		// 账号
+	required string password = 2;       // 密码
+    required string iconUrl = 3;        // 头像链接
+    required string name = 4;           // 玩家名字
+}
+
+// -----
+// 账号登录返回
+// -----
+// id: 102
+message sc_login
+{
+	required uint32 result = 1;			// 0失败 1成功
+	required string reason = 2;			// 失败原因
+}
+
+// -----
+// 请求重连
+// -----
+// id: 103
+message cs_login_reconnection
+{
+    required string account = 1;
+	required string reconnectKey = 2;	// 重连密码
+}
+
+// -----
+// 请求重连返回
+// -----
+// id: 104
+message sc_login_reconnection
+{
+	required uint32 result = 1;			// 0失败 1成功
+	required string reason = 2;			// 失败原因
+}
+
+// -----
+// 注销登录
+// -----
+// id: 105
+message cs_login_logoff
+{
+}
+
+// -----
+// 重复登录（通知被顶号）
+// -----
+// id: 106
+message sc_login_repeat
+{
+}
+
+// -----
+// 心跳包
+// -----
+// id: 107
+message cs_login_heartbeat
+{
+}
+
+// -----
+// 心跳包返回
+// -----
+// id: 108
+message sc_login_heartbeat
+{
+}
+

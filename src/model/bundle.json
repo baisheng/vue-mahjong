@@ -1,0 +1,1205 @@
+{
+  "nested": {
+    "protopackage": {
+      "nested": {
+        "pb_reward_info": {
+          "fields": {
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "num": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            },
+            "content": {
+              "type": "uint32",
+              "id": 3
+            }
+          }
+        },
+        "pb_mahjong_value": {
+          "fields": {
+            "info": {
+              "rule": "repeated",
+              "type": "uint32",
+              "id": 1,
+              "options": {
+                "packed": false
+              }
+            }
+          }
+        },
+        "pb_mahjong_fight_info": {
+          "fields": {
+            "id": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 1
+            },
+            "order": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            },
+            "circle": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 3
+            },
+            "position": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 4
+            },
+            "basis": {
+              "rule": "repeated",
+              "type": "uint32",
+              "id": 5,
+              "options": {
+                "packed": false
+              }
+            },
+            "meld": {
+              "rule": "repeated",
+              "type": "pb_mahjong_meld_info",
+              "id": 6,
+              "options": {}
+            },
+            "out": {
+              "rule": "repeated",
+              "type": "uint32",
+              "id": 7,
+              "options": {
+                "packed": false
+              }
+            },
+            "flower": {
+              "rule": "repeated",
+              "type": "pb_mahjong_flower",
+              "id": 8,
+              "options": {}
+            },
+            "state": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 9
+            },
+            "flag": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 10
+            },
+            "canmeld": {
+              "rule": "repeated",
+              "type": "pb_mahjong_meld_info",
+              "id": 11,
+              "options": {}
+            },
+            "canwin": {
+              "rule": "repeated",
+              "type": "pb_mahjong_ready",
+              "id": 12,
+              "options": {}
+            },
+            "iconUrl": {
+              "type": "string",
+              "id": 13
+            },
+            "mahjongId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 14
+            },
+            "leftTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 15
+            },
+            "playLimit": {
+              "rule": "repeated",
+              "type": "uint32",
+              "id": 16,
+              "options": {
+                "packed": false
+              }
+            }
+          }
+        },
+        "pb_mahjong_ready": {
+          "fields": {
+            "id": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "list": {
+              "rule": "repeated",
+              "type": "uint32",
+              "id": 2,
+              "options": {
+                "packed": false
+              }
+            }
+          }
+        },
+        "pb_mahjong_meld_info": {
+          "fields": {
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "playerId": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 2
+            },
+            "mahjongId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 3
+            },
+            "info": {
+              "rule": "repeated",
+              "type": "uint32",
+              "id": 4,
+              "options": {
+                "packed": false
+              }
+            }
+          }
+        },
+        "pb_mahjong_fight_end": {
+          "fields": {
+            "id": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 1
+            },
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            },
+            "flag": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 3
+            },
+            "reward": {
+              "rule": "repeated",
+              "type": "pb_reward_info",
+              "id": 4,
+              "options": {}
+            }
+          }
+        },
+        "pb_mahjong_flower": {
+          "fields": {
+            "type": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "list": {
+              "rule": "repeated",
+              "type": "uint32",
+              "id": 2,
+              "options": {
+                "packed": false
+              }
+            }
+          }
+        },
+        "pb_mahjong_fight_record": {
+          "fields": {
+            "playerId": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 1
+            },
+            "flag": {
+              "rule": "required",
+              "type": "bool",
+              "id": 2
+            },
+            "score": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 3
+            }
+          }
+        },
+        "pb_mahjong_win_type": {
+          "fields": {
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "score": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            }
+          }
+        },
+        "pb_mahjong_combination": {
+          "fields": {
+            "pairs": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "combination": {
+              "rule": "repeated",
+              "type": "pb_mahjong_value",
+              "id": 2,
+              "options": {}
+            }
+          }
+        },
+        "cs_login": {
+          "fields": {
+            "account": {
+              "rule": "required",
+              "type": "string",
+              "id": 1
+            },
+            "password": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            },
+            "iconUrl": {
+              "rule": "required",
+              "type": "string",
+              "id": 3
+            },
+            "name": {
+              "rule": "required",
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "sc_login": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "cs_login_reconnection": {
+          "fields": {
+            "account": {
+              "rule": "required",
+              "type": "string",
+              "id": 1
+            },
+            "reconnectKey": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "sc_login_reconnection": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "cs_login_logoff": {
+          "fields": {}
+        },
+        "sc_login_repeat": {
+          "fields": {}
+        },
+        "cs_login_heartbeat": {
+          "fields": {}
+        },
+        "sc_login_heartbeat": {
+          "fields": {}
+        },
+        "cs_room_find": {
+          "fields": {
+            "roomId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            },
+            "longTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 3
+            }
+          }
+        },
+        "sc_room_find_response": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "pb_room_member": {
+          "fields": {
+            "PlayerId": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 1
+            },
+            "playerName": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            },
+            "position": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 3
+            },
+            "iconUrl": {
+              "rule": "required",
+              "type": "string",
+              "id": 4
+            },
+            "winCount": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 5
+            },
+            "totalCount": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 6
+            },
+            "score": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 7
+            },
+            "isPay": {
+              "rule": "required",
+              "type": "bool",
+              "id": 8
+            }
+          }
+        },
+        "cs_room_quit": {
+          "fields": {}
+        },
+        "sc_room_quit_response": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "cs_room_sit": {
+          "fields": {
+            "roomId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "position": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            }
+          }
+        },
+        "sc_room_sit_response": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "sc_room_update": {
+          "fields": {
+            "roomId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "members": {
+              "rule": "repeated",
+              "type": "pb_room_member",
+              "id": 2,
+              "options": {}
+            },
+            "isStart": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 3
+            },
+            "isMarch": {
+              "rule": "required",
+              "type": "bool",
+              "id": 4
+            },
+            "ownerId": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 5
+            },
+            "recordId": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 6
+            },
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 7
+            },
+            "endTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 8
+            },
+            "longTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 9
+            }
+          }
+        },
+        "sc_room_clean": {
+          "fields": {
+            "roomId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            }
+          }
+        },
+        "cs_room_owner_list": {
+          "fields": {}
+        },
+        "sc_room_owner_list_response": {
+          "fields": {
+            "list": {
+              "rule": "repeated",
+              "type": "pb_room_owner",
+              "id": 1,
+              "options": {}
+            }
+          }
+        },
+        "pb_room_owner": {
+          "fields": {
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "number": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            },
+            "roomId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 3
+            },
+            "createTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 4
+            },
+            "endTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 5
+            }
+          }
+        },
+        "cs_room_start_mahjong": {
+          "fields": {
+            "roomId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            }
+          }
+        },
+        "sc_room_start_mahjong": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "cs_mahjong_fight_die": {
+          "fields": {}
+        },
+        "sc_mahjong_fight_die": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "cs_mahjong_fight_play": {
+          "fields": {
+            "id": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            }
+          }
+        },
+        "cs_mahjong_fight_meld": {
+          "fields": {
+            "meld": {
+              "rule": "required",
+              "type": "pb_mahjong_meld_info",
+              "id": 1
+            }
+          }
+        },
+        "cs_mahjong_fight_win": {
+          "fields": {}
+        },
+        "sc_mahjong_fight_end": {
+          "fields": {
+            "isWin": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "list": {
+              "rule": "repeated",
+              "type": "pb_mahjong_fight_end",
+              "id": 2,
+              "options": {}
+            },
+            "combinationList": {
+              "rule": "repeated",
+              "type": "pb_mahjong_value",
+              "id": 3,
+              "options": {}
+            },
+            "typeList": {
+              "rule": "repeated",
+              "type": "pb_mahjong_win_type",
+              "id": 4,
+              "options": {}
+            },
+            "winId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 5
+            },
+            "count": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 6
+            }
+          }
+        },
+        "sc_mahjong_fight_info": {
+          "fields": {
+            "list": {
+              "rule": "repeated",
+              "type": "pb_mahjong_fight_info",
+              "id": 1,
+              "options": {}
+            }
+          }
+        },
+        "sc_mahjong_fight_state": {
+          "fields": {
+            "banker": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "dicepostion": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            },
+            "isFirst": {
+              "rule": "required",
+              "type": "bool",
+              "id": 3
+            },
+            "isend": {
+              "rule": "required",
+              "type": "bool",
+              "id": 4
+            },
+            "lastPostion": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 5
+            },
+            "lastMahjongid": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 6
+            },
+            "endTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 7
+            },
+            "fengCircle": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 8
+            },
+            "num": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 9
+            }
+          }
+        },
+        "cs_mahjong_fight_cancel": {
+          "fields": {}
+        },
+        "cs_mahjong_fight_ready": {
+          "fields": {
+            "id": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            }
+          }
+        },
+        "cs_mahjong_fight_prepare": {
+          "fields": {}
+        },
+        "sc_mahjong_fight_play": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "sc_mahjong_fight_win": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "sc_mahjong_fight_cancel": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "sc_mahjong_fight_prepare": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "sc_mahjong_fight_ready": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "sc_mahjong_fight_left_time": {
+          "fields": {
+            "leftTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "id": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 2
+            },
+            "position": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 3
+            }
+          }
+        },
+        "cs_mahjong_fight_record": {
+          "fields": {}
+        },
+        "sc_mahjong_fight_record": {
+          "fields": {
+            "list": {
+              "rule": "repeated",
+              "type": "pb_mahjong_fight_record",
+              "id": 1,
+              "options": {}
+            }
+          }
+        },
+        "cs_mahjong_fight_update": {
+          "fields": {}
+        },
+        "sc_mahjong_fight_meld": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "sc_player_info": {
+          "fields": {
+            "id": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 1
+            },
+            "name": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            },
+            "diamond": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 3
+            },
+            "iconUrl": {
+              "rule": "required",
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "cs_player_recharge": {
+          "fields": {
+            "orderid": {
+              "rule": "required",
+              "type": "string",
+              "id": 1
+            },
+            "price": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            }
+          }
+        },
+        "sc_player_recharge": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "orderid": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            },
+            "reward": {
+              "rule": "repeated",
+              "type": "pb_reward_info",
+              "id": 3,
+              "options": {}
+            },
+            "reason": {
+              "type": "string",
+              "id": 4
+            }
+          }
+        },
+        "cs_query_game_statistics": {
+          "fields": {}
+        },
+        "sc_query_game_statistics_response": {
+          "fields": {
+            "allTimes": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "allWinProb": {
+              "rule": "required",
+              "type": "float",
+              "id": 2
+            },
+            "list": {
+              "rule": "repeated",
+              "type": "pb_game_statistics_record",
+              "id": 3,
+              "options": {}
+            }
+          }
+        },
+        "pb_game_statistics_record": {
+          "fields": {
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "totalTimes": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            },
+            "winProb": {
+              "rule": "required",
+              "type": "float",
+              "id": 3
+            }
+          }
+        },
+        "cs_query_game_record": {
+          "fields": {
+            "recordId": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 1
+            }
+          }
+        },
+        "sc_query_game_record_response": {
+          "fields": {
+            "recordId": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 1
+            },
+            "list": {
+              "rule": "repeated",
+              "type": "pb_game_record_info",
+              "id": 2,
+              "options": {}
+            }
+          }
+        },
+        "pb_game_record_info": {
+          "fields": {
+            "info": {
+              "rule": "required",
+              "type": "pb_game_record",
+              "id": 1
+            },
+            "members": {
+              "rule": "repeated",
+              "type": "pb_game_player_info",
+              "id": 2,
+              "options": {}
+            }
+          }
+        },
+        "pb_game_record": {
+          "fields": {
+            "id": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 1
+            },
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            },
+            "ownerId": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 3
+            },
+            "roomId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 4
+            },
+            "totalTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 5
+            },
+            "startTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 6
+            },
+            "endTime": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 7
+            }
+          }
+        },
+        "pb_game_player_info": {
+          "fields": {
+            "playerId": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 1
+            },
+            "name": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            },
+            "icon": {
+              "rule": "required",
+              "type": "string",
+              "id": 3
+            },
+            "winFlag": {
+              "rule": "required",
+              "type": "bool",
+              "id": 4
+            },
+            "score": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 5
+            }
+          }
+        },
+        "cs_query_game_find": {
+          "fields": {}
+        },
+        "sc_query_game_find_response": {
+          "fields": {
+            "my": {
+              "rule": "repeated",
+              "type": "pb_game_record",
+              "id": 1,
+              "options": {}
+            },
+            "other": {
+              "rule": "repeated",
+              "type": "pb_game_record",
+              "id": 2,
+              "options": {}
+            }
+          }
+        },
+        "sc_common_game_init": {
+          "fields": {
+            "flag": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "roomId": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            }
+          }
+        },
+        "cs_common_chat": {
+          "fields": {
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "content": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            },
+            "toid": {
+              "rule": "required",
+              "type": "uint64",
+              "id": 4
+            }
+          }
+        },
+        "sc_common_chat": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "type": {
+              "type": "uint32",
+              "id": 2
+            },
+            "content": {
+              "type": "string",
+              "id": 3
+            },
+            "toid": {
+              "type": "uint64",
+              "id": 4
+            },
+            "fromid": {
+              "type": "uint64",
+              "id": 5
+            }
+          }
+        },
+        "sc_common_notice": {
+          "fields": {
+            "type": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "content": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        },
+        "cs_feedback_fill": {
+          "fields": {
+            "feedType": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 1
+            },
+            "gameType": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 2
+            },
+            "content": {
+              "rule": "required",
+              "type": "string",
+              "id": 3
+            },
+            "name": {
+              "rule": "required",
+              "type": "string",
+              "id": 4
+            },
+            "contact": {
+              "rule": "required",
+              "type": "uint32",
+              "id": 5
+            }
+          }
+        },
+        "sc_feedback_fill": {
+          "fields": {
+            "result": {
+              "rule": "required",
+              "type": "bool",
+              "id": 1
+            },
+            "reason": {
+              "rule": "required",
+              "type": "string",
+              "id": 2
+            }
+          }
+        }
+      }
+    }
+  }
+}

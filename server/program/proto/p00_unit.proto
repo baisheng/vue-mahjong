@@ -1,0 +1,88 @@
+// ---------
+// 公用结构
+// ---------
+package protopackage;
+
+// 奖励信息
+message pb_reward_info
+{
+    required uint32         type = 1;
+    required uint32         num = 2;
+    optional uint32         content = 3;
+}
+
+message pb_mahjong_value
+{
+	repeated uint32 info = 1;
+}
+
+message pb_mahjong_fight_info
+{
+	required uint64 id = 1;        					// 玩家id
+	required uint32 order = 2;						// 风位     谁是庄家，谁是东
+	required uint32 circle = 3;						// 圈位	 第一把确定圈位，不变
+	required uint32 position = 4;  					// 玩家位置 1，2，3，4 只是表示1，2，3，4顺序位置，和东南西北无关
+	repeated uint32 basis = 5;    					// 手上的牌
+	repeated pb_mahjong_meld_info meld = 6;     	// 吃碰杠的牌
+	repeated uint32 out = 7;                        // 打出去的牌
+	repeated pb_mahjong_flower flower = 8;          // 获得的花牌
+	required uint32 state = 9;                      // 玩家的状态 1进入房间 2准备中 3进行牌局中 4 已经离桌
+
+	required uint32 flag = 10;                       // 0 正常 1已经选择听牌 2 已经可以胡 3 已经选择胡牌 4已经被胡牌
+	repeated pb_mahjong_meld_info canmeld = 11;     //  可以 吃 碰 杠 
+	repeated pb_mahjong_ready canwin =12;           // [{pb_mahjong_ready，1， 【2，3}] 听的牌 如果选择听牌，把1出了，听2， 3
+    optional string iconUrl = 13;                   // 头像链接
+    required uint32 mahjongId = 14;                 // 最新抓的牌
+    required uint32 leftTime = 15;                  // 重连剩余时间
+
+    repeated uint32 playLimit = 16;                 // 碰完吃完，不能出的牌
+}
+
+// 
+message pb_mahjong_ready
+{
+	required uint32 id = 1;                          // 一般是抓完牌可以检测可不可以听牌，出这张牌
+	repeated uint32 list = 2;						 // 出了那张牌，听的牌 【1， 2， 3】
+}
+message pb_mahjong_meld_info
+{
+	required uint32 type = 1;      //  1111明杠 2222暗杠 111碰 123吃
+	required uint64 playerId = 2;        // 吃的，碰的谁的牌
+	required uint32 mahjongId = 3;
+	repeated uint32 info = 4;  // 组合
+}
+
+message pb_mahjong_fight_end
+{
+	required uint64 id = 1;
+	required uint32 type = 2;       			//0是无关，1是点炮，2是胡，3被自摸
+	required uint32 flag = 3;                   // 结算时 0 不输不赢 1赢牌 2输牌
+	repeated pb_reward_info reward = 4;        	// 结算获得的奖励 获得奖励或者失败奖励
+
+}
+// 正花 野花
+message pb_mahjong_flower
+{
+	required bool type = 1;          // 因为只有正花与野花 正花用true, 野花用false
+	repeated uint32 list = 2;        // 对应花的id 可以为是1个，也可以是多个【2，3，4】
+}
+// 积分记录
+message pb_mahjong_fight_record
+{
+	required uint64  playerId = 1;
+	required bool    flag = 2;                    // true 是赢 false 输
+	required uint32  score = 3;                 // 赢 是赢的积分 输是输的积分
+}
+
+// 胡牌台数计算
+message pb_mahjong_win_type
+{
+	required uint32 type = 1;
+	required uint32 score = 2;
+}
+
+message pb_mahjong_combination
+{
+	required uint32 pairs = 1;
+	repeated pb_mahjong_value combination = 2; 
+}

@@ -1,0 +1,25 @@
+// ---------
+// 意见反馈
+// ---------
+package protopackage;
+import "p00_unit.proto";
+
+
+// id 601
+// 填写意见反馈
+message cs_feedback_fill
+{
+	required uint32 feedType = 1;         // 反馈类型 1反馈意见 2 违法举报 3 游戏建议 4充值问题 5扣钻问题 6 掉线问题 7 商务合作 8 其他问题
+	required uint32 gameType = 2;         // 游戏类型 1是象山麻将
+	required string content = 3;          // 反馈内容
+	required string name = 4;             // 反馈姓名
+	required uint32 contact = 5;          // 联系方式  电话号码暂时当整数填了
+}
+
+// id 602
+// 填写反馈返回
+message sc_feedback_fill
+{
+	required bool result = 1;            // 反馈结果
+	required string reason = 2;          // 
+}

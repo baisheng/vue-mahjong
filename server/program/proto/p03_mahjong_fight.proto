@@ -1,0 +1,159 @@
+// ---------
+// 麻将玩法协议
+// ---------
+package protopackage;
+import "p00_unit.proto";
+
+
+// 掷骰子
+// id 301
+message cs_mahjong_fight_die
+{
+
+}
+// 掷骰子返回
+// // id 302  还会返回sc_mahjong_fight_state  包括庄家信息等
+message sc_mahjong_fight_die
+{
+	required bool result = 1;          // 给掷骰子的玩家回
+	required string reason = 2;        // 失败的话，有一个失败原因
+}
+
+// 出牌
+// id 303
+message cs_mahjong_fight_play
+{
+	required uint32 id = 1;          // 玩家出的牌
+}
+
+//  碰  吃 杠
+//  id 304
+message cs_mahjong_fight_meld
+{	
+	// required uint32 type = 1;                         // 123 吃  111 碰 1111 明杠 2222暗杠
+	required pb_mahjong_meld_info  meld = 1 ;          // 吃完的组合 或者杠的组合
+}
+
+//  胡牌  305
+message cs_mahjong_fight_win
+{
+
+}
+
+// 结算返回 306
+message sc_mahjong_fight_end
+{
+	required bool isWin = 1;                          //1 
+	repeated pb_mahjong_fight_end list = 2;           // 赢牌类型
+	repeated pb_mahjong_value combinationList = 3;    // 赢牌的组合
+	repeated pb_mahjong_win_type typeList = 4;
+	required uint32 winId = 5;						  // 胡牌的麻将id
+	required uint32 count = 6;                        // 总台数
+}
+//id 307 玩家信息
+message sc_mahjong_fight_info
+{
+	repeated pb_mahjong_fight_info list = 1; 
+}
+
+// id 308 状态信息
+message sc_mahjong_fight_state
+{
+	required uint32  banker = 1;                // 牌局庄家  玩家位置1 2 3 4 是固定的
+   	required uint32  dicepostion = 2;           // 骰子数，0表示未置色子
+   	required bool    isFirst = 3;
+   	required bool    isend = 4;                   // true 表示牌局结束
+   	required uint32  lastPostion =5;				// 上一个出牌的方位
+   	required uint32  lastMahjongid = 6;         // 出的牌 
+   	required uint32  endTime = 7;
+   	required uint32  fengCircle = 8;            // 东风圈 北风圈
+   	required uint32  num = 9;                   // 还剩余多少张牌没抓
+}
+
+// 309 放弃碰杠吃胡听等
+message cs_mahjong_fight_cancel
+{
+
+}
+
+// 听牌310
+message cs_mahjong_fight_ready
+{
+	required uint32 id = 1;                        // 选择听牌，把这张牌出了
+}
+
+//  准备311
+message cs_mahjong_fight_prepare
+{
+	// required uint32 id = 1;                    // 玩家准备
+}
+
+// id 312
+message sc_mahjong_fight_play
+{
+	required bool result = 1; 
+  	required string reason = 2;	
+}
+// 胡牌的返回信息 313
+message sc_mahjong_fight_win {
+  required bool result = 1;
+  required string reason = 2;
+}
+// id 314
+message sc_mahjong_fight_cancel
+{
+	required bool result = 1; 
+  	required string reason = 2;	
+}
+// id 315
+message sc_mahjong_fight_prepare
+{
+	required bool result = 1; 
+  	required string reason = 2;	
+}
+
+// id 316
+message sc_mahjong_fight_ready
+{
+	required bool result = 1; 
+  	required string reason = 2;	
+}
+// id 317 
+message sc_mahjong_fight_left_time
+{
+	required uint32 leftTime = 1;
+	required uint64 id = 2;                     // 玩家id
+	required uint32 position = 3;
+}
+
+
+// 查看玩家战斗记录 
+// id 318
+message cs_mahjong_fight_record
+{
+
+}
+
+// id 319
+message sc_mahjong_fight_record
+{
+	repeated pb_mahjong_fight_record list = 1;			// 
+}
+
+// id 320
+// 请求牌局信息  这一条请求，会更新牌局的所有，
+// 牌局信息sc_mahjong_fight_state
+//玩家牌信息sc_mahjong_fight_info
+//积分记录 sc_mahjong_fight_record
+//等牌倒计时 sc_mahjong_fight_left_time
+message cs_mahjong_fight_update
+{
+
+}
+
+// id 321
+message sc_mahjong_fight_meld
+{
+	required bool result = 1; 
+  	required string reason = 2;	
+}

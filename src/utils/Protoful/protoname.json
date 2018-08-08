@@ -1,0 +1,225 @@
+[
+  {
+    "id": 101,
+    "name": "protopackage.cs_login"
+  },
+  {
+    "id": 102,
+    "name": "protopackage.sc_login"
+  },
+  {
+    "id": 103,
+    "name": "protopackage.cs_login_reconnection"
+  },
+  {
+    "id": 104,
+    "name": "protopackage.sc_login_reconnection"
+  },
+  {
+    "id": 105,
+    "name": "protopackage.cs_login_logoff"
+  },
+  {
+    "id": 106,
+    "name": "protopackage.sc_login_repeat"
+  },
+  {
+    "id": 107,
+    "name": "protopackage.cs_login_heartbeat"
+  },
+  {
+    "id": 108,
+    "name": "protopackage.sc_login_heartbeat"
+  },
+  {
+    "id": 201,
+    "name": "protopackage.cs_room_find"
+  },
+  {
+    "id": 202,
+    "name": "protopackage.sc_room_find_response"
+  },
+  {
+    "id": 205,
+    "name": "protopackage.cs_room_quit"
+  },
+  {
+    "id": 206,
+    "name": "protopackage.sc_room_quit_response"
+  },
+  {
+    "id": 207,
+    "name": "protopackage.cs_room_sit"
+  },
+  {
+    "id": 208,
+    "name": "protopackage.sc_room_sit_response"
+  },
+  {
+    "id": 209,
+    "name": "protopackage.sc_room_update"
+  },
+  {
+    "id": 210,
+    "name": "protopackage.sc_room_clean"
+  },
+  {
+    "id": 211,
+    "name": "protopackage.cs_room_owner_list"
+  },
+  {
+    "id": 212,
+    "name": "protopackage.sc_room_owner_list_response"
+  },
+  {
+    "id": 213,
+    "name": "protopackage.cs_room_start_mahjong"
+  },
+  {
+    "id": 214,
+    "name": "protopackage.sc_room_start_mahjong"
+  },
+  {
+    "id": 301,
+    "name": "protopackage.cs_mahjong_fight_die"
+  },
+  {
+    "id": 302,
+    "name": "protopackage.sc_mahjong_fight_die"
+  },
+  {
+    "id": 303,
+    "name": "protopackage.cs_mahjong_fight_play"
+  },
+  {
+    "id": 304,
+    "name": "protopackage.cs_mahjong_fight_meld"
+  },
+  {
+    "id": 305,
+    "name": "protopackage.cs_mahjong_fight_win"
+  },
+  {
+    "id": 306,
+    "name": "protopackage.sc_mahjong_fight_end"
+  },
+  {
+    "id": 307,
+    "name": "protopackage.sc_mahjong_fight_info"
+  },
+  {
+    "id": 308,
+    "name": "protopackage.sc_mahjong_fight_state"
+  },
+  {
+    "id": 309,
+    "name": "protopackage.cs_mahjong_fight_cancel"
+  },
+  {
+    "id": 310,
+    "name": "protopackage.cs_mahjong_fight_ready"
+  },
+  {
+    "id": 311,
+    "name": "protopackage.cs_mahjong_fight_prepare"
+  },
+  {
+    "id": 312,
+    "name": "protopackage.sc_mahjong_fight_play"
+  },
+  {
+    "id": 313,
+    "name": "protopackage.sc_mahjong_fight_win"
+  },
+  {
+    "id": 314,
+    "name": "protopackage.sc_mahjong_fight_cancel"
+  },
+  {
+    "id": 315,
+    "name": "protopackage.sc_mahjong_fight_prepare"
+  },
+  {
+    "id": 316,
+    "name": "protopackage.sc_mahjong_fight_ready"
+  },
+  {
+    "id": 317,
+    "name": "protopackage.sc_mahjong_fight_left_time"
+  },
+  {
+    "id": 318,
+    "name": "protopackage.cs_mahjong_fight_record"
+  },
+  {
+    "id": 319,
+    "name": "protopackage.sc_mahjong_fight_record"
+  },
+  {
+    "id": 320,
+    "name": "protopackage.cs_mahjong_fight_update"
+  },{
+    "id": 321,
+    "name": "protopackage.sc_mahjong_fight_meld"
+  },
+  {
+    "id": 401,
+    "name": "protopackage.sc_player_info"
+  },
+  {
+    "id": 402,
+    "name": "protopackage.cs_player_recharge"
+  },
+  {
+    "id": 403,
+    "name": "protopackage.sc_player_recharge"
+  },
+
+  {
+    "id": 501,
+    "name": "protopackage.cs_query_game_statistics"
+  },
+  {
+    "id": 502,
+    "name": "protopackage.sc_query_game_statistics_response"
+  },
+  {
+    "id": 503,
+    "name": "protopackage.cs_query_game_record"
+  },
+  {
+    "id": 504,
+    "name": "protopackage.sc_query_game_record_response"
+  },
+  {
+    "id": 505,
+    "name": "protopackage.cs_query_game_find"
+  },
+  {
+    "id": 506,
+    "name": "protopackage.sc_query_game_find_response"
+  },
+  {
+    "id": 507,
+    "name": "protopackage.sc_common_game_init"
+  },
+  {
+    "id": 508,
+    "name": "protopackage.cs_common_chat"
+  },
+  {
+    "id": 509,
+    "name": "protopackage.sc_common_chat"
+  },
+  {
+    "id": 510,
+    "name": "protopackage.sc_common_notice"
+  },
+  {
+    "id": 601,
+    "name": "protopackage.cs_feedback_fill"
+  },{
+    "id": 602,
+    "name": "protopackage.sc_feedback_fill"
+  }
+]

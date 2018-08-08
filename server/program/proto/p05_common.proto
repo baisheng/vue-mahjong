@@ -1,0 +1,144 @@
+// ---------
+// 麻将战斗公共协议
+// ---------
+package protopackage;
+import "p00_unit.proto";
+
+// -----
+// 查询牌局统计
+// -----
+// id: 501
+message cs_query_game_statistics
+{
+}
+
+// -----
+// 查询牌局统计返回
+// -----
+// id: 502
+message sc_query_game_statistics_response
+{
+	 required uint32 allTimes = 1;
+   required float allWinProb = 2;
+   repeated pb_game_statistics_record list = 3;
+}
+
+message pb_game_statistics_record
+{
+    required uint32 type = 1;               // 什么类型的麻将
+    required uint32 totalTimes = 2;        // 总局数
+    required float  winProb = 3;           // 胜率
+}
+// -----
+// 查找战绩
+// -----
+// id: 503
+message cs_query_game_record
+{
+    required uint64 recordId = 1;      // 0表示请求自己参加的所有，>0 是申请指定战绩
+}
+
+// -----
+// 查找战绩返回
+// -----
+// id: 504
+message sc_query_game_record_response
+{
+  required uint64 recordId = 1;
+	repeated pb_game_record_info list = 2;
+}
+
+message pb_game_record_info
+{
+	  required pb_game_record info = 1;
+    repeated pb_game_player_info members = 2; // 输赢
+}
+
+message pb_game_record 
+{
+	  required uint64 id = 1;                 // 每开一个牌局，都有的独立的唯一id
+	  required uint32 type = 2;               // 牌局类型
+	  required uint64 ownerId = 3;            // 房主
+	  required uint32 roomId = 4;             // 房间号
+    required uint32 totalTime = 5;          // 多久时长类型的游戏 15分钟
+    required uint32 startTime = 6;          // 什么时候创的房间
+    required uint32 endTime = 7;            // 结束时间 
+}
+
+message pb_game_player_info
+{
+	required uint64 playerId = 1;         // 玩家id
+	required string name = 2;             // 玩家信息
+	required string icon = 3;             // 玩家头像
+	required bool   winFlag = 4;          // 玩家输赢
+	required uint32 score = 5;            // 积分 %% 如果输，那就是输的积分，如果是赢，那就是赢的积分
+}
+
+
+// 发现 其实就是自己开的局，和参加的局
+// id 505
+message cs_query_game_find
+{
+
+}
+
+// 返回
+// id 506
+message sc_query_game_find_response
+{
+	repeated pb_game_record my = 1;     // 我开的局
+	repeated pb_game_record other = 2;  // 参加的牌局
+}
+
+// -----
+// 玩家信息
+// -----
+// id: 507
+message sc_common_game_init{
+    required uint32 flag = 1;           // 类型：1大厅 2房间
+    required uint32 roomId = 2;         // 房号
+}
+
+
+// -----
+// 发送信息 聊天
+// -----
+// id: 508
+message cs_common_chat
+{
+  required uint32 type =1; //
+  required string content =2;
+  required uint64 toid =4;
+}
+// -----
+// 聊天返回
+// -----
+// id: 509
+message sc_common_chat
+{
+  required bool result = 1;     
+  // optional uint32 channel = 2;        // 频道：[1:系统] [2:房间] [3:私聊]   
+  optional uint32 type =2;            // 1发表情 2 砸表情 3语音 4 留用 
+  optional string content =3;         //  p碰， k杠， w胡牌， o出牌
+  optional uint64 toid =4;
+  optional uint64 fromid =5;
+}
+
+// -----
+// 公告信息
+// -----
+// id: 510
+message sc_common_notice
+{
+  required uint32 type = 1;      // 1走马灯提示 2 麻将语音语音提示
+  required string content =2;
+}
+
+// 吃："e,12,100,101" “ e, 吃的牌，谁吃，吃谁的
+// 碰："p,12,100,101" ”p, 碰谁的牌，谁碰，碰谁
+// 杠："k,12,100,101" 暗杠id相同 "k,12,100,100" “k,杠的牌，谁杠，杠谁的
+// 点炮："s,12,100,101"        "s, 点炮的牌，谁胡， 胡谁"
+// 自摸："w, 12, 100, 100      "w, 自摸的牌，谁自摸，默认值"
+// 出牌: "o, 12, 100, 100"     ”o , 出的牌， 谁出的牌，默认值“
+
+
